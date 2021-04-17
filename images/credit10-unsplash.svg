@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   height="64"
+   width="320"
+   sodipodi:docname="credit10-unsplash.svg"
+   id="svg10"
+   version="1.1"
+   viewBox="0 0 320 64"
+   clip-rule="evenodd"
+   stroke-miterlimit="2"
+   stroke-linejoin="round"
+   fill-rule="evenodd">
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs14" />
+  <sodipodi:namedview
+     inkscape:snap-nodes="false"
+     inkscape:snap-others="false"
+     inkscape:current-layer="svg10"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:cy="74.316137"
+     inkscape:cx="211.25491"
+     inkscape:zoom="1.32"
+     inkscape:guide-bbox="true"
+     showguides="true"
+     showgrid="false"
+     id="namedview12"
+     inkscape:window-height="705"
+     inkscape:window-width="1366"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff">
+    <sodipodi:guide
+       id="guide859"
+       orientation="0,-1"
+       position="299.43849,64" />
+    <sodipodi:guide
+       id="guide861"
+       orientation="0,-1"
+       position="-19.69697,3.3939394" />
+  </sodipodi:namedview>
+  <text
+     transform="scale(0.94106797,1.0626225)"
+     id="text843"
+     y="22.252666"
+     x="84.387024"
+     style="font-style:normal;font-weight:normal;font-size:28.6671px;line-height:1.25;font-family:sans-serif;fill:#000027;fill-opacity:1;stroke:none;stroke-width:0.716677;"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';stroke-width:0.716677;fill:#000027;fill-opacity:1;"
+       y="22.252666"
+       x="84.387024"
+       id="tspan841"
+       sodipodi:role="line">Unsplash</tspan><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.716677;fill:#000027;fill-opacity:1;"
+       id="tspan845"
+       y="58.418388"
+       x="84.387024"
+       sodipodi:role="line">Photos for everyone</tspan><tspan
+       style="stroke-width:0.716677;fill:#000027;fill-opacity:1;"
+       id="tspan849"
+       y="94.584106"
+       x="84.387024"
+       sodipodi:role="line" /><tspan
+       style="stroke-width:0.716677;fill:#000027;fill-opacity:1;"
+       id="tspan851"
+       y="130.41798"
+       x="84.387024"
+       sodipodi:role="line" /><tspan
+       style="stroke-width:0.716677;fill:#000027;fill-opacity:1;"
+       id="tspan853"
+       y="166.25186"
+       x="84.387024"
+       sodipodi:role="line" /><tspan
+       style="stroke-width:0.716677;fill:#000027;fill-opacity:1;"
+       id="tspan855"
+       y="202.08574"
+       x="84.387024"
+       sodipodi:role="line" /></text>
+  <g
+     style="fill:#000027;fill-opacity:1"
+     transform="matrix(0.64948332,0,0,0.63709064,-10.749328,-13.378903)"
+     fill-rule="evenodd"
+     id="g4">
+    <path
+       style="fill:#000027;fill-opacity:1"
+       d="M 50,21 H 86 V 48 H 50 Z M 20,63 H 50.087 V 90.24 H 86.166 V 63 H 116 v 54 H 20 Z"
+       id="path2" />
+  </g>
+</svg>
