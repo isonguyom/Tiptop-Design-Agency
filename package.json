@@ -1,0 +1,25 @@
+{
+  "name": "tiptop-design-agency",
+  "version": "1.0.0",
+  "description": "A creative digital design agency website",
+  "main": "index.html",
+  "scripts": {
+    "test": "npm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isonguyom/tiptop-design-agency.git"
+  },
+  "keywords": [
+    "tiptop",
+    "design",
+    "digital",
+    "creative"
+  ],
+  "author": "Martin Isonguyo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isonguyom/tiptop-design-agency/issues"
+  },
+  "homepage": "https://github.com/isonguyom/tiptop-design-agency#readme"
+}
