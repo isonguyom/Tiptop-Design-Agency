@@ -9,7 +9,7 @@
     <meta name="description" content="Design Agency Services">
     <meta name="author" content="Tiptop">
     <title>Tiptop Design Agency</title>
-    <link rel="icon" type="image/png" href="./images/icon.png" />
+    <link rel="icon" type="image/png" href="./images/Tiptop Icon.png" />
     <link href="http://fonts.cdnfonts.com/css/roboto-slab-2" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -23,292 +23,215 @@
 </head>
 
 <body>
-    <nav>
-        <div class="logo" id="logo">
-            <a href="./index.html">
-                <img src="./images/logo.png" alt="logo">
-            </a>
-        </div>
-        <svg id="hamburger" class="hamburger" viewBox="0 0 80 80">
-            <line class="line01" x1="40" y1="3" x2="80" y2="3" />
-            <line class="line02" x1="0" y1="30" x2="80" y2="30" />
-            <line class="line03" x1="0" y1="57" x2="40" y2="57" />
-        </svg>
-        <ul class="main-nav" id="mainNav">
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./services.html">Services</a></li>
-            <li><a href="./works.html">Works</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <header class="tt-top-header">
+        <nav class="tt-main-nav">
+            <div class="tt-header wrapper">
+                <div class="tt-logo" id="logo">
+                    <a href="./index.html">
+                        <img src="./images/Tiptop Logo.png" alt="logo">
+                    </a>
+                </div>
+                <button class="tt-hamburger-wrapper">
+                    <svg id="hamburger" class="tt-hamburger" viewBox="0 0 82 82">
+                        <line class="line01" stroke-linecap="round" x1="40" y1="3" x2="80" y2="3" />
+                        <line class="line02" stroke-linecap="round" x1="0" y1="30" x2="80" y2="30" />
+                        <line class="line03" stroke-linecap="round" x1="0" y1="57" x2="40" y2="57" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Main Nav -->
+            <div id="mainMenu" class="tt-main-menu-wrapper">
+                <ul class="tt-main-menu">
+                    <li><a class="active" href="./index.html">Home</a></li>
+                    <li><a class="" href="./pages/about.html">About</a></li>
+                    <li><a href="./pages/services.html">Services</a></li>
+                    <li><a href="./pages/works.html">Works</a></li>
+                    <li><a href="./pages/blog.html">Blog</a></li>
+                    <li><a href="./pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="tt-landing-page">
+            <div class="tt-homepage-slider">
+                <!-- First slide -->
+                <div class="tt-homepage-slide home-slide1 wrapper active">
+                    <div class="home-slide-img">
+                        <img src="./images/business-3d-businessman-walking.png">
+                        <!-- Illustration by <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6">Icons 8</a> from <a href="https://icons8.com/illustrations">Ouch!</a> -->
+                    </div>
+                    <div class="home-slide-text">
+                        <h1 class="tt-title tt-title1">Every journey begins with a step</h1>
+                        <p class="tt-subtitle tt-subtitle1">Start your design journey today</p>
+                        <a href="#thought" class="tt-btn">Get Started</a>
+                    </div>
+                </div>
+                <!-- Second slide -->
+                <div class="tt-homepage-slide home-slide2 wrapper">
+                    <div class="home-slide-img">
+                        <img src="./images/business-3d-new-meditation-girl-1.png">
+                    </div>
+                    <div class="home-slide-text">
+                        <h1 class="tt-title tt-title1">A simple Rebranding can do the trick</h1>
+                        <p class="tt-subtitle tt-subtitle1">“The secret of change is to focus all of your energy, not on
+                            fighting the old, but
+                            on building the new.”</p>
+                    </div>
+                </div>
+                <!-- Third slide -->
+                <div class="tt-homepage-slide home-slide3 wrapper">
+                    <div class="home-slide-img">
+                        <img src="./images/business-3d.png">
+                    </div>
+                    <div class="home-slide-text">
+                        <h1 class="tt-title tt-title1">Make your imaginations your world</h1>
+                        <p class="tt-subtitle tt-subtitle1">Imagination is the beginning of creation. You imagine what
+                            you desire, you will what
+                            you imagine, and at last, we create what you will.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </section>
+    </header>
+
     <main>
-        <section class="landing-page">
-            <!-- Swiper -->
-            <div class="swiper-container home-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide home-slide">
-                        <div class="home-slide-text">
-                            <div class="title" data-swiper-parallax="-300">
-                                <h1>Every journey begins with a step</h1>
-                            </div>
-                            <div class="subtitle" data-swiper-parallax="-200">
-                                <p>Start your design journey today</p>
-                            </div>
-                            <div class="text" data-swiper-parallax="-100">
-                                <button class="btn">Get Started</button>
-                            </div>
-                        </div>
-                        <div class="home-slide-img">
-                            <img src="./images/home-slide1.svg" alt="slide 1">
-                        </div>
-                    </div>
-                    <div class="swiper-slide home-slide">
-                        <div class="home-slide-text">
-                            <div class="title" data-swiper-parallax="-300">
-                                <h1>A simple Rebranding can do the trick</h1>
-                            </div>
-                            <div class="subtitle" data-swiper-parallax="-200">
-                                <p>
-                                    “The secret of change is to focus all of your energy, not on fighting the old, but
-                                    on building the new.”
-                                </p>
-                            </div>
-                        </div>
-                        <div class="home-slide-img">
-                            <img src="./images/home-slide2.svg" alt="slide 2">
-                        </div>
-                    </div>
-                    <div class="swiper-slide home-slide">
-                        <div class="home-slide-text">
-                            <div class="title" data-swiper-parallax="-300">
-                                <h1>Make your imaginations your world</h1>
-                            </div>
-                            <div class="subtitle" data-swiper-parallax="-200">
-                                <p>
-                                    Imagination is the beginning of creation. You imagine what you desire, you will what
-                                    you imagine, and at last, we create what you will.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="home-slide-img">
-                            <img src="./images/home-slide3.svg" alt="slide 3">
-                        </div>
-                    </div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
+        <section id="thought" class="tt-thought-wrapper wrapper">
+            <p class="tt-heading">How we think</p>
+            <p class="tt-thought">
+                Excellence is not a gift, but a skill that takes practice. We do not act ‘rightly’ because we are
+                ‘excellent’, in fact we achieve ‘excellence’ by acting ‘rightly.
+                We work with brands that have the habit of excellence to stand out and win the race.
+            </p>
         </section>
-        <section class="thought-section">
-            <p class="sections-title">How we think</p>
-            <div class="think-img"><img src="./images/thinking.png" alt="think"></div>
-            <div class="thought" id="quote">
-                <h3>
-                    Excellence is not a gift, but a skill that takes practice. We do not act ‘rightly’ because we are
-                    ‘excellent’, in fact we achieve ‘excellence’ by acting ‘rightly.
-                    We work with brands that have the habit of excellence to stand out and win the race.
-                </h3>
-            </div>
-        </section>
-
-        <section class="services-section">
-
-            <div class="services-inner">
-                <div class="services-list">
-                    <p class="sections-title">Our Services</p>
-                    <ul>
-                        <li id="menu_sImg1" class="list-item">
-                            <a href="#sImg1" class="active service">Graphic Design</a>
-                        </li>
-                        <li id="menu_sImg2" class="list-item">
-                            <a href="#sImg2" class="service">UI/UX Design</a>
-                        </li>
-                        <li class="list-item">
-                            <a href="#sImg3" class="service">Web Design</a>
-                        </li>
-                        <li class="list-item">
-                            <a href="#sImg4" class="service">Brand Identity</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="serv-img">
-                    <div id="sImg1" class="service-item-img service-item-img1">
-                        <img src="./images/graphic-design.png" alt="graphic design">
+        <section class="tt-services-wrapper wrapper">
+            <p class="tt-heading">Our Services</p>
+            <div class="tt-services-inner">
+                <ul class="tt-services-nav">
+                    <li id="menu_sImg1" class="list-item">
+                        <a href="#sImg1" class="service active">Graphic Design</a>
+                    </li>
+                    <li id="menu_sImg2" class="list-item">
+                        <a href="#sImg2" class="service">Mobile App Design</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#sImg3" class="service">Web Design</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#sImg4" class="service">Brand Identity</a>
+                    </li>
+                </ul>
+                <div class="tt-services-icons">
+                    <div id="sImg1" class="tt-services-icon active">
+                        <img src="./images/7898563_pencil_ruller_icon.png" alt="">
                     </div>
-                    <div id="sImg2" class="service-item-img service-item-img2">
-                        <img src="./images/ux.png" alt="ui/ux">
+                    <div id="sImg2" class="tt-services-icon">
+                        <img src="./images/Mobile_app_perspective_matte.png" alt="">
                     </div>
-                    <div id="sImg3" class="service-item-img service-item-img3">
-                        <img src="./images/web-design.png" alt="web design">
+                    <div id="sImg3" class="tt-services-icon">
+                        <img src="./images/Dashboard_perspective_matte.png" alt="">
                     </div>
-                    <div id="sImg4" class="service-item-img service-item-img4">
-                        <img src="./images/branding.png" alt="branding">
+                    <div id="sImg4" class="tt-services-icon">
+                        <img src="./images/Marketing_perspective_matte.png" alt="">
                     </div>
                 </div>
             </div>
         </section>
-        <section class="portfolio-section">
-            <div class="portfolio-title animate">
-                <p class="sections-title">Portfolio</p>
-                <h3>Featured Projects</h3>
-                <button>View all Projects</button>
+        <section class="tt-portfolio-wrapper wrapper">
+            <div class="tt-heading-wrapper">
+                <p class="tt-heading">Featured Projects</p>
+                <a class="tt-btn" href="./pages/works.html">View all Projects</a>
             </div>
-            <div class="projects">
-                <div class="project project1 custom-width">
+            <div class="tt-portfolio-inner">
+                <div class="tt-project">
                     <img src="./images/project1-vedia.png" alt="project 1">
-                    <a href="#" class="design-des">
-                        <h3>Ventus Digital Agency (VeDiA) </h3>
-                            <p>Web, Logo</p>
-                    </a>
+                    <a href="#" class="tt-project-name">Ventus Digital Agency (VeDiA)</a>
+                    <a href="#" class="tt-project-tag">Web</a>
+                    <a href="#" class="tt-project-tag">Logo</a>
                 </div>
-                <div class="project project2 custom-width">
+                <div class="tt-project">
                     <img src="./images/project2-adasun.png" alt="project 2">
-                    <a href="#" class="design-des">
-                        <h3>AdaSun Distillers</h3>
-                            <p>Branding, Logo</p>
-                    </a>
+                    <a href="#" class="tt-project-name">AdaSun Distillers</a>
+                    <a href="#" class="tt-project-tag">Branding</a>
+                    <a href="#" class="tt-project-tag">Logo</a>
                 </div>
-                <div class="project project3 custom-width">
+                <div class="tt-project">
                     <img src="./images/project3-form.png" alt="project 3">
-                    <a href=" #" class="design-des">
-                    <h3>Sign Up Form Interface</h3>
-                        <p>UI/UX</p>
-                        </a>
+                    <a href=" #" class="tt-project-name">Form UI Design</a>
+                    <a href=" #" class="tt-project-tag">UI/UX</a>
                 </div>
-                <div class="project project4 custom-width">
+                <div class="tt-project">
                     <img src="./images/project4-blengs.png" alt="project 4">
-                    <a href="#" class="design-des">
-                        <h3>Iyak About Us Landing Page & Logo</h3>
-                            <p>Web, Logo</p>
-                    </a>
+                    <a href="#" class="tt-project-name">Blengs business website</a>
+                    <a href=" #" class="tt-project-tag">Web</a>
+                    <a href=" #" class="tt-project-tag">UI/UX</a>
                 </div>
-                <div class="project project5 custom-width">
+                <div class="tt-project">
                     <img src="./images/project5-iyak.png" alt="project 5">
-                    <a href="#" class="design-des">
-                        <h3>Grego Food E-commerce Website</h3>
-                            <p>Web, UI/UX</p>
-                    </a>
+                    <a href="#" class="tt-project-name">Iyak About Page & Logo</a>
+                    <a href=" #" class="tt-project-tag">Web</a>
+                    <a href=" #" class="tt-project-tag">Logo</a>
                 </div>
-                <div class="project project6 custom-width">
+                <div class="tt-project">
                     <img src="./images/project6-grego.png" alt="project 6">
-                    <a href="#" class="design-des">
-                        <h3>MS Photos Portfolio Landing Page</h3>
-                            <p>Web</p>
-                    </a>
+                    <a href="#" class="tt-project-name">Grego Food E-commerce Website</a>
+                    <a href=" #" class="tt-project-tag">Web</a>
+                    <a href=" #" class="tt-project-tag">UI/UX</a>
                 </div>
             </div>
         </section>
-
-        <section class="blog-section">
-            <p class="sections-title">Latest on our Blog</p>
-            <!-- Swiper -->
-            <div class="swiper-container post-carousel animate">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide post post1">
-                        <div class="post-img">
-                            <img src="./images/blog-post1.jpg" alt="post 1">
-                            <a href="#" class="design-des design-des2">
-                                <img src="./images/hover-icon.png" alt="icon">
-                            </a>
-                        </div>
-                        <div class="post-text">
-                            <h3><a href="#">understanding design principles</a></h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, explicabo
-                                voluptate. Consequuntur facere quos repudiandae nesciunt, minima non dolorem atque
-                                explicabo aut quod tempore repellat, assumenda neque sunt numquam enim.
-                                <br><br>minima non dolorem atque
-                                explicabo aut quod tempore repellat, assumenda neque sunt numquam enim.
-                            </p><br>
-                            <p><a href="#">Read More...</a></p>
-                        </div>
+        <section class="tt-blog-wrapper wrapper">
+            <div class="tt-heading-wrapper">
+                <p class="tt-heading">Latest on our Blog</p>
+                <a class="tt-btn" href="./pages/blog.html">Read More</a>
+            </div>
+            <div class="tt-blog-inner">
+                <div class="tt-blog-post post1">
+                    <div class="post-img">
+                        <img src="./images/blog-post1.jpg" alt="post 1">
                     </div>
-                    <div class="swiper-slide post post2">
-                        <div class="post-img">
-                            <a href="#"><img src="./images/blog-post2.jpg" alt="post 2"></a>
-                            <a href="#" class="design-des design-des2">
-                                <img src="./images/hover-icon.png" alt="icon">
-                            </a>
-                        </div>
-                        <div class="post-text">
-                            <h3><a href="#">How to build an efficient design team</a></h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, explicabo
-                                voluptate. Consequuntur facere quos repudiandae nesciunt, minima non dolorem atque
-                                explicabo aut quod tempore repellat, assumenda neque sunt numquam enim.
-                                <br><br>minima non dolorem atque
-                                explicabo aut quod tempore repellat, assumenda neque sunt numquam enim.
-                            </p><br>
-                            <p><a href="#">Read More...</a></p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide post post3">
-                        <div class="post-img">
-                            <a href="#"><img src="./images/blog-post3.jpg" alt="post 3"></a>
-                            <a href="#" class="design-des design-des2">
-                                <img src="./images/hover-icon.png" alt="icon">
-                            </a>
-                        </div>
-                        <div class="post-text">
-                            <h3><a href="#">You are the best designer</a></h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, explicabo
-                                voluptate. Consequuntur facere quos repudiandae nesciunt, minima non dolorem atque
-                                explicabo aut quod tempore repellat, assumenda neque sunt numquam enim.
-                                <br><br>dae fugiat quisquam dolorum corrupti provident? Aut!
-                            </p><br>
-                            <p><a href="#">Read More...</a></p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide post post4">
-                        <div class="post-img">
-                            <a href="#"><img src="./images/blog-post4.jpg" alt="post 4"></a>
-                            <a href="#" class="design-des design-des2">
-                                <img src="./images/hover-icon.png" alt="icon">
-                            </a>
-                        </div>
-                        <div class="post-text">
-                            <h3><a href="#">How to build a great brand</a></h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, explicabo
-                                voluptate. Consequuntur facere quos repudiandae nesciunt, minima non dolorem atque
-                                explicabo aut quod tempore repellat, assumenda neque sunt numquam enim.
-                                <br><br>dae fugiat quisquam dolorum corrupti provident? Aut!
-                            </p><br>
-                            <p><a href="#">Read More...</a></p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide post post5">
-                        <div class="post-img">
-                            <a href="#"><img src="./images/blog-post5.jpg" alt="post 5"></a>
-                            <a href="#" class="design-des design-des2">
-                                <img src="./images/hover-icon.png" alt="icon">
-                            </a>
-                        </div>
-                        <div class="post-text">
-                            <h3><a href="#">From designs to codes</a></h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, explicabo
-                                voluptate. Consequuntur facere quos repudiandae nesciunt, minima non dolorem atque
-                                explicabo aut quod tempore repellat, assumenda neque sunt numquam enim.
-                                <br><br>dae fugiat quisquam dolorum corrupti provident? Aut!
-                            </p><br>
-                            <p><a href="#">Read More...</a></p>
-                        </div>
+                    <div class="post-text">
+                        <a href="#">understanding design principles</a>
                     </div>
                 </div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
+                <div class="tt-blog-post post2">
+                    <div class="post-img">
+                        <img src="./images/blog-post2.jpg" alt="post 2">
+                    </div>
+                    <div class="post-text">
+                        <a href="#">How to build an efficient design team</a>
+                    </div>
+                </div>
+                <div class="tt-blog-post post3">
+                    <div class="post-img">
+                        <img src="./images/blog-post3.jpg" alt="post 3">
+                    </div>
+                    <div class="post-text">
+                        <a href="#">You are the best designer</a>
+                    </div>
+                </div>
+                <div class="tt-blog-post post4">
+                    <div class="post-img">
+                        <img src="./images/blog-post4.jpg" alt="post 4">
+                    </div>
+                    <div class="post-text">
+                        <a href="#">How to build a great brand</a>
+                    </div>
+                </div>
         </section>
-
-        <section class="clients">
-            <p class="sections-title">Credit</p>
-            <!-- Swiper -->
+        <section class="tt-client-wrapper wrapper">
             <div class="swiper-container clients-carousel animate">
                 <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/Tiptop Logo.svg" alt="iconscout" title="Iconscout">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/adasun.svg" alt="google" title="Google">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/vedia.svg" alt="youtube" title="Youtube">
+                    </div>
                     <div class="swiper-slide">
                         <img src="images/credit1-google.svg" alt="google" title="Google">
                     </div>
@@ -316,48 +239,27 @@
                         <img src="images/credit2-youtube.svg" alt="youtube" title="Youtube">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/credit3-inkscape.svg" alt="inkscape" title="Inkscape">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/credit4-stackoverflow.svg" alt="stack overflow" title="Stack Overflow">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/credit11-gsap.svg" alt="gsap" title="gsap">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/credit5-awwwards.svg" alt="awwwards" title="Awwwards">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/undraw.png" alt="undraw" title="undraw">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/credit7-iconscout.svg" alt="iconscout" title="Iconscout">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/credit8-flaticon.svg" alt="flaticon" title="Flaticon">
-                    </div>
-                    <div class="swiper-slide">
                         <img src="images/credit9-iconape.svg" alt="iconape" title="iconape">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/credit10-unsplash.svg" alt="unsplash" title="unsplash">
+                        <img src="images/gokada-logo.svg" alt="unsplash" title="unsplash">
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <section class="footer2 animate">
+        <section class="tt-footers-wrapper wrapper">
             <div class="office-add">
-                <h2>Our Head Office</h2>
+                <p class="tt-heading">Our Head Office</p>
                 <address>
                     102 Madison Avenue - Second Floor
                     New York, NY 10016
                     <p>T: (646) 480.6328</p>
                 </address>
             </div>
-            <div class="social-com">
-                <h2>Connect on social media</h2>
+            <div class="social-nav">
+                <p class="tt-heading">Connect on social media</p>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
                 <a href="#"><i class="fab fa-facebook-square"></i></a>
                 <a href="#"><i class="fab fa-twitter-square"></i></a>
@@ -365,11 +267,11 @@
                 <a href="#"><i class="fab fa-youtube-square"></i></a>
             </div>
             <div class="contact">
-                <h2>Let's handle your project</h2>
-                <h3><a href="#">Contact Us</a></h3>
+                <p class="tt-heading">Let's handle your project</p>
+                <a class="tt-btn" href="./pages/contact.html">Contact Us</a>
             </div>
         </section>
-        <div class="copyright">&copy; 2021 Tiptop Design Agency - All Rights Reserved</div>
+        <div class="tt-copyright wrapper">&copy; 2021 Tiptop Design Agency - All Rights Reserved</div>
     </footer>
 
 
@@ -381,6 +283,7 @@
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/ScrollTrigger.min.js"></script>
     <script src="./js/gsap.min.js"></script> -->
+    <script src="./js/sliders.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

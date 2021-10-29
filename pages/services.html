@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="Digital Agency, Design, Branding">
+    <meta name="keywords" content="Digital Agency, Design, Branding, web">
     <meta name="description" content="Design Agency Services">
     <meta name="author" content="Tiptop">
-    <title>Tiptop Design Agency-Services-Services</title>
-    <link rel="icon" type="image/png" href="./images/icon.png" />
+    <title>Tiptop Design Agency</title>
+    <link rel="icon" type="image/png" href="../images/Tiptop Icon.png" />
     <link href="http://fonts.cdnfonts.com/css/roboto-slab-2" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -19,47 +19,55 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <nav>
-        <div class="logo" id="logo">
-            <a href="./index.html">
-                <img src="./images/logo.png" alt="logo">
-            </a>
-        </div>
-        <svg id="hamburger" class="hamburger" viewBox="0 0 80 80">
-            <line class="line01" x1="40" y1="3" x2="80" y2="3" />
-            <line class="line02" x1="0" y1="30" x2="80" y2="30" />
-            <line class="line03" x1="0" y1="57" x2="40" y2="57" />
-        </svg>
-        <ul class="main-nav" id="mainNav">
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./services.html">Services</a></li>
-            <li><a href="./works.html">Works</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section class="land-page" id="landPage">
-            <div class="land-text" id="landText">
-                <h1>If you want to predict the future, create it.</h1>
+    <header class="tt-top-header">
+        <nav class="tt-main-nav">
+            <div class="tt-header wrapper">
+                <div class="tt-logo" id="logo">
+                    <a href="../index.html">
+                        <img src="../images/Tiptop Logo.png" alt="logo">
+                    </a>
+                </div>
+                <button class="tt-hamburger-wrapper">
+                    <svg id="hamburger" class="tt-hamburger" viewBox="0 0 82 82">
+                        <line class="line01" stroke-linecap="round" x1="40" y1="3" x2="80" y2="3" />
+                        <line class="line02" stroke-linecap="round" x1="0" y1="30" x2="80" y2="30" />
+                        <line class="line03" stroke-linecap="round" x1="0" y1="57" x2="40" y2="57" />
+                    </svg>
+                </button>
             </div>
-            <div class="breadcrumb">
+            <!-- Main Nav -->
+            <div id="mainMenu" class="tt-main-menu-wrapper">
+                <ul class="tt-main-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a class="active" href="./about.html">About</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./works.html">Works</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="tt-landing-page2 tt-landing-page-about wrapper">
+            <div class="tt-landing-text">
+                <h1 class="tt-title tt-title1">If you want to predict the future, create it.</h1>
+            </div>
+            <div class="tt-breadcrumb">
                 <p class="sections-title">Services</p>
             </div>
         </section>
-
-        <section class="services">
-            <!-- <p class="sections-title">What we do</p> -->
-            <div class="we-do-flex animate">
-                <div class="we-do custom-width">
-                    <div class="we-do-img">
-                        <img src="./images/graphic-design2.png" alt="graphic design">
+    </header>
+    <main>
+        <section class="tt-services wrapper">
+            <div class="tt-services-flex">
+                <div class="tt-service custom-width">
+                    <div class="tt-service-img">
+                        <img src="../images/graphic-design2.png" alt="graphic design">
                     </div>
-                    <div class="we-do-des">
+                    <div class="tt-service-des">
                         <h3>Graphic Design</h3>
                         <p>
                             Explicabo, amet! Inventore ea modi provident placeat adipisci ex
@@ -67,23 +75,23 @@
                         </p>
                     </div>
                 </div>
-                <div class="we-do custom-width">
-                    <div class="we-do-img">
-                        <img src="./images/ux2.png" alt="ui/ux">
+                <div class="tt-service custom-width">
+                    <div class="tt-service-img">
+                        <img src="../images/ux2.png" alt="ui/ux">
                     </div>
-                    <div class="we-do-des">
-                        <h3>UI/UX Design</h3>
+                    <div class="tt-service-des">
+                        <h3>Mobile App Design</h3>
                         <p>
                             Explicabo, amet! Inventore ea modi provident placeat adipisci ex
                             voluptas optio, recusandae maiores architecto iste! Pariatur error.
                         </p>
                     </div>
                 </div>
-                <div class="we-do custom-width">
-                    <div class="we-do-img">
-                        <img src="./images/web-design2.png" alt="web design">
+                <div class="tt-service custom-width">
+                    <div class="tt-service-img">
+                        <img src="../images/web-design2.png" alt="web design">
                     </div>
-                    <div class="we-do-des">
+                    <div class="tt-service-des">
                         <h3>Web Design</h3>
                         <p>
                             Explicabo, amet! Inventore ea modi provident placeat adipisci ex
@@ -91,11 +99,11 @@
                         </p>
                     </div>
                 </div>
-                <div class="we-do custom-width">
-                    <div class="we-do-img">
-                        <img src="./images/branding2.png" alt="branding">
+                <div class="tt-service custom-width">
+                    <div class="tt-service-img">
+                        <img src="../images/branding2.png" alt="branding">
                     </div>
-                    <div class="we-do-des">
+                    <div class="tt-service-des">
                         <h3>Brand Identity</h3>
                         <p>
                             Explicabo, amet! Inventore ea modi provident placeat adipisci ex
@@ -106,31 +114,31 @@
             </div>
         </section>
 
-        <section class="tools">
-            <p class="sections-title">What we use</p>
-            <div class="tools-inner animate">
+        <section class="tt-tools-wrapper wrapper">
+            <p class="tt-heading">What we use</p>
+            <div class="tt-tools-inner">
                 <ul class="tools-name">
                     <li>
-                        <h1 class="active">FIGMA</h1>
+                        <h2 class="active">FIGMA</h2>
                     </li>
                     <li>
-                        <h1>CANVA</h1>
+                        <h2>CANVA</h2>
                     </li>
                     <li>
-                        <h1>sketch</h1>
+                        <h2>sketch</h2>
                     </li>
                     <li>
-                        <h1>COREL DRAW</h1>
+                        <h2>COREL DRAW</h2>
                     </li>
                     <li>
-                        <h1>ADOBE PHOTOSHOP</h1>
+                        <h2>ADOBE PHOTOSHOP</h2>
                     </li>
                     <li>
-                        <h1>adobe illustrator</h1>
+                        <h2>adobe illustrator</h2>
                     </li>
                 </ul>
             </div>
-            <div class='tools-menu'>
+            <!-- <div class='tools-menu'>
                 <label class='tool-display' for='tools-menu'>
                     <h2>FIGMA</h2>
                 </label>
@@ -152,26 +160,21 @@
                 <a class='tool' href='#'>
                     <img class="tools-icon" src="./images/icon-tool4-coreldraw.svg" alt="corel draw">
                 </a>
-            </div><!-- menu -->
-        </section>
-
-        <section class="nxt-client">
-            <h1>Let's handle your next design</h1>
-            <a href="#" type="button" class="btn">Contact us</a>
+            </div>menu -->
         </section>
     </main>
     <footer>
-        <section class="footer2">
+        <section class="tt-footers-wrapper wrapper">
             <div class="office-add">
-                <h2>Our Head Office</h2>
+                <p class="tt-heading">Our Head Office</p>
                 <address>
                     102 Madison Avenue - Second Floor
                     New York, NY 10016
                     <p>T: (646) 480.6328</p>
                 </address>
             </div>
-            <div class="social-com">
-                <h2>Connect on social media</h2>
+            <div class="social-nav">
+                <p class="tt-heading">Connect on social media</p>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
                 <a href="#"><i class="fab fa-facebook-square"></i></a>
                 <a href="#"><i class="fab fa-twitter-square"></i></a>
@@ -179,11 +182,11 @@
                 <a href="#"><i class="fab fa-youtube-square"></i></a>
             </div>
             <div class="contact">
-                <h2>Let's handle your project</h2>
-                <h3><a href="#">Contact Us</a></h3>
+                <p class="tt-heading">Let's handle your project</p>
+                <a class="tt-btn" href="./pages/contact.html">Contact Us</a>
             </div>
         </section>
-        <div class="copyright">&copy; 2021 Tiptop Design Agency - All Rights Reserved</div>
+        <div class="tt-copyright wrapper">&copy; 2021 Tiptop Design Agency - All Rights Reserved</div>
     </footer>
 
 
@@ -191,11 +194,12 @@
 
 
 
-    <script src="./js/all.min.js"></script>
+    <!-- <script src="./js/all.min.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/ScrollTrigger.min.js"></script>
-    <script src="./js/gsap.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/gsap.min.js"></script> -->
+    <script src="./js/sliders.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

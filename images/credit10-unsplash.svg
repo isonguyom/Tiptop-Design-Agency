@@ -7,17 +7,17 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   height="64"
-   width="320"
-   sodipodi:docname="credit10-unsplash.svg"
-   id="svg10"
-   version="1.1"
-   viewBox="0 0 320 64"
-   clip-rule="evenodd"
-   stroke-miterlimit="2"
+   fill-rule="evenodd"
    stroke-linejoin="round"
-   fill-rule="evenodd">
+   stroke-miterlimit="2"
+   clip-rule="evenodd"
+   viewBox="0 0 320 64"
+   version="1.1"
+   id="svg10"
+   sodipodi:docname="credit10-unsplash.svg"
+   width="320"
+   height="64"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)">
   <metadata
      id="metadata16">
     <rdf:RDF>
@@ -26,90 +26,91 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
      id="defs14" />
   <sodipodi:namedview
-     inkscape:snap-nodes="false"
-     inkscape:snap-others="false"
-     inkscape:current-layer="svg10"
-     inkscape:window-maximized="1"
-     inkscape:window-y="-8"
-     inkscape:window-x="-8"
-     inkscape:cy="74.316137"
-     inkscape:cx="211.25491"
-     inkscape:zoom="1.32"
-     inkscape:guide-bbox="true"
-     showguides="true"
-     showgrid="false"
-     id="namedview12"
-     inkscape:window-height="705"
-     inkscape:window-width="1366"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0"
-     guidetolerance="10"
-     gridtolerance="10"
-     objecttolerance="10"
-     borderopacity="1"
+     inkscape:document-rotation="0"
+     pagecolor="#ffffff"
      bordercolor="#666666"
-     pagecolor="#ffffff">
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview12"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="1.2559494"
+     inkscape:cx="211.25491"
+     inkscape:cy="74.316137"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg10"
+     inkscape:snap-others="false"
+     inkscape:snap-nodes="false">
     <sodipodi:guide
-       id="guide859"
+       position="299.43849,64"
        orientation="0,-1"
-       position="299.43849,64" />
+       id="guide859" />
     <sodipodi:guide
-       id="guide861"
+       position="-19.69697,3.3939394"
        orientation="0,-1"
-       position="-19.69697,3.3939394" />
+       id="guide861" />
   </sodipodi:namedview>
   <text
-     transform="scale(0.94106797,1.0626225)"
-     id="text843"
-     y="22.252666"
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:28.6671px;line-height:1.25;font-family:sans-serif;fill:#252525;fill-opacity:1;stroke:none;stroke-width:0.716677;opacity:0.5;"
      x="84.387024"
-     style="font-style:normal;font-weight:normal;font-size:28.6671px;line-height:1.25;font-family:sans-serif;fill:#000027;fill-opacity:1;stroke:none;stroke-width:0.716677;"
-     xml:space="preserve"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';stroke-width:0.716677;fill:#000027;fill-opacity:1;"
-       y="22.252666"
-       x="84.387024"
+     y="22.252666"
+     id="text843"
+     transform="scale(0.94106797,1.0626225)"><tspan
+       sodipodi:role="line"
        id="tspan841"
-       sodipodi:role="line">Unsplash</tspan><tspan
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.716677;fill:#000027;fill-opacity:1;"
-       id="tspan845"
+       x="84.387024"
+       y="22.252666"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';stroke-width:0.716677;fill:#252525;fill-opacity:1;">Unsplash</tspan><tspan
+       sodipodi:role="line"
+       x="84.387024"
        y="58.418388"
+       id="tspan845"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.716677;fill:#252525;fill-opacity:1;">Photos for everyone</tspan><tspan
+       sodipodi:role="line"
        x="84.387024"
-       sodipodi:role="line">Photos for everyone</tspan><tspan
-       style="stroke-width:0.716677;fill:#000027;fill-opacity:1;"
-       id="tspan849"
        y="94.584106"
+       id="tspan849"
+       style="stroke-width:0.716677;fill:#252525;fill-opacity:1;" /><tspan
+       sodipodi:role="line"
        x="84.387024"
-       sodipodi:role="line" /><tspan
-       style="stroke-width:0.716677;fill:#000027;fill-opacity:1;"
-       id="tspan851"
        y="130.41798"
+       id="tspan851"
+       style="stroke-width:0.716677;fill:#252525;fill-opacity:1;" /><tspan
+       sodipodi:role="line"
        x="84.387024"
-       sodipodi:role="line" /><tspan
-       style="stroke-width:0.716677;fill:#000027;fill-opacity:1;"
-       id="tspan853"
        y="166.25186"
+       id="tspan853"
+       style="stroke-width:0.716677;fill:#252525;fill-opacity:1;" /><tspan
+       sodipodi:role="line"
        x="84.387024"
-       sodipodi:role="line" /><tspan
-       style="stroke-width:0.716677;fill:#000027;fill-opacity:1;"
-       id="tspan855"
        y="202.08574"
-       x="84.387024"
-       sodipodi:role="line" /></text>
+       id="tspan855"
+       style="stroke-width:0.716677;fill:#252525;fill-opacity:1;" /></text>
   <g
-     style="fill:#000027;fill-opacity:1"
-     transform="matrix(0.64948332,0,0,0.63709064,-10.749328,-13.378903)"
+     id="g4"
      fill-rule="evenodd"
-     id="g4">
+     transform="matrix(0.64948332,0,0,0.63709064,-10.749328,-13.378903)"
+     style="fill:#252525;fill-opacity:1;opacity:0.5">
     <path
-       style="fill:#000027;fill-opacity:1"
+       id="path2"
        d="M 50,21 H 86 V 48 H 50 Z M 20,63 H 50.087 V 90.24 H 86.166 V 63 H 116 v 54 H 20 Z"
-       id="path2" />
+       style="fill:#252525;fill-opacity:1" />
   </g>
 </svg>
