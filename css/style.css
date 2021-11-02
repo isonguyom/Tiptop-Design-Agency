@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+*:focus {
+outline: 1px solid #252525;
+}
+
 :root {
     --tt-main-color: #6E8C89;
     --tt-second-color: #E1D0B1;
@@ -26,6 +30,7 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+
 
 img {
     max-width: 100%;
@@ -101,6 +106,10 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.tt-logo {
+    display: inline-block;
     z-index: 1;
 }
 
@@ -127,13 +136,13 @@ button.tt-hamburger-wrapper {
 
 .tt-main-menu-wrapper {
     background: var(--tt-second-color);
-    height: 100vh;
+    height: 0;
     position: absolute;
     top: 0;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     width: 80%;
-    display: block;
+    opacity: 0;
 }
 
 .tt-main-menu {
@@ -150,6 +159,7 @@ button.tt-hamburger-wrapper {
 .tt-main-menu li {
     margin-bottom: 3em;
     padding-top: 0.5em;
+    opacity: 0;
 }
 
 .tt-main-menu li:last-child {
@@ -184,6 +194,7 @@ button.tt-hamburger-wrapper {
 .tt-homepage-slider {
     width: 100%;
     position: relative;
+    height: 100%;
 }
 
 .tt-homepage-slide {
@@ -192,7 +203,8 @@ button.tt-hamburger-wrapper {
     position: absolute;
     background: var(--tt-main-color);
     top: 0;
-    transform: translateX(100%);
+    opacity: 0;
+    transition: 2s ease-in-out;
 }
 
 .home-slide-img {
@@ -208,11 +220,27 @@ button.tt-hamburger-wrapper {
 }
 
 .tt-homepage-slide.active {
-    transform: translateX(0%);
+    opacity: 1;
 }
 
 .tt-homepage-slide>div {
     width: 100%;
+}
+
+.home-slide-nav {
+    position: absolute;
+    left: 50%;
+    width: fit-content;
+
+}
+
+.home-slide-nav .slide-nav-dot {
+    font-size: 2rem;
+}
+
+#homeSliderNext {
+    display: inline-block;
+    visibility: hidden;
 }
 
 .tt-title1 {
@@ -452,7 +480,7 @@ footer .tt-heading {
 
 .social-nav a {
     font-size: 1.7rem;
-    padding-right: 0.5em;
+    margin-right: 0.5em;
     color: var(--tt-font-color);
     text-shadow: 2px 2px #25252586;
     opacity: 0.9;

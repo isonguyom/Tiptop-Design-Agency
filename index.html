@@ -26,11 +26,9 @@
     <header class="tt-top-header">
         <nav class="tt-main-nav">
             <div class="tt-header wrapper">
-                <div class="tt-logo" id="logo">
-                    <a href="./index.html">
-                        <img src="./images/Tiptop Logo.png" alt="logo">
-                    </a>
-                </div>
+                <a class="tt-logo" href="./index.html" id="logo">
+                    <img src="./images/Tiptop Logo.png" alt="logo">
+                </a>
                 <button class="tt-hamburger-wrapper">
                     <svg id="hamburger" class="tt-hamburger" viewBox="0 0 82 82">
                         <line class="line01" stroke-linecap="round" x1="40" y1="3" x2="80" y2="3" />
@@ -90,9 +88,12 @@
                     </div>
                 </div>
             </div>
-            <div>
-
+            <div class="home-slide-nav">
+                <span class="homeslide-dot" onclick="currentSlide(1)"><i class="fa-solid fa-circle"></i></span>
+                <span class="homeslide-dot" onclick="currentSlide(2)"><i class="fa-solid fa-circle"></i></span>
+                <span class="homeslide-dot" onclick="currentSlide(3)"><i class="fa-solid fa-circle"></i></span>
             </div>
+            <a id="homeSliderNext" class="next" href="#">next</a>
         </section>
     </header>
 

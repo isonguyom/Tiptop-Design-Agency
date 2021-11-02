@@ -1,6 +1,6 @@
 //Global variables declarations
 let hamburger = document.getElementById('hamburger');
-let menubar = document.getElementById('mainNav');
+let menubar = document.getElementById('mainMenu');
 
 
 //GSAP ANIMATIONS
@@ -28,21 +28,21 @@ tlMenu
     },
   }, 0)
   .to(menubar, {
-    duration: 0.5,
+    duration: 0.7,
     opacity: 1,
-    width: '100vw', //full-width menu
+    height: "100vh",
     ease: 'expo.inOut',
   }, 0)
-  .to('.main-nav li', {
+  .to('.tt-main-menu li', {
     duration: 0.5,
-    width: '20%',
     stagger: 0.1,
-    ease: 'expo.inOut',
-  }, -0.2)
-  .to('.main-nav li a', {
-    duration: 0.5,
     opacity: 1,
-  }, 0.2)
+    ease: 'expo.inOut',
+  }, 0.1)
+  .to('.tt-logo', {
+    duration: 0.5,
+    opacity: 0,
+  }, 0.1)
 
   .reverse();
 
@@ -302,16 +302,45 @@ let blogSlider = new Swiper('.blog-slider', {
 });
 
 
-// Demo by http://creative-punch.net
+// // Demo by http://creative-punch.net
 
-var items = document.querySelectorAll('.circle a');
+// var items = document.querySelectorAll('.circle a');
 
-for(var i = 0, l = items.length; i < l; i++) {
-  items[i].style.left = (50 - 35*Math.cos(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
+// for(var i = 0, l = items.length; i < l; i++) {
+//   items[i].style.left = (50 - 35*Math.cos(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
   
-  items[i].style.top = (50 + 35*Math.sin(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
+//   items[i].style.top = (50 + 35*Math.sin(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
+// }
+
+// document.querySelector('.menu-button').onclick = function(e) {
+//    e.preventDefault(); document.querySelector('.circle').classList.toggle('open');
+// }
+
+
+let homepageSlider = function() {
+  let nextBtn = document.querySelector("#homeSliderNext"),
+  slide = document.querySelectorAll(".tt-homepage-slide"),
+      i = 0;
+
+  nextBtn.onclick = (event) => {
+      event.preventDefault();
+
+      slide[i].classList.remove("active");
+      i++;
+
+      if (i >= slide.length) {
+          i = 0;
+      }
+
+      slide[i].classList.add("active");
+  };
+
+  slider_callback();
+  let sliderInterval = window.setInterval(slider_callback, 4000);
+
+  function slider_callback() {
+      nextBtn.click();
+  }
 }
 
-document.querySelector('.menu-button').onclick = function(e) {
-   e.preventDefault(); document.querySelector('.circle').classList.toggle('open');
-}
+homepageSlider();
