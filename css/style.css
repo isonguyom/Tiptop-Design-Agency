@@ -229,13 +229,25 @@ button.tt-hamburger-wrapper {
 
 .home-slide-nav {
     position: absolute;
+    top: 97vh;
     left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     width: fit-content;
-
+    z-index: 1000;
+    text-align: center;
 }
 
-.home-slide-nav .slide-nav-dot {
-    font-size: 2rem;
+.home-slide-nav .homeslide-dot {
+    font-size: 1.3rem;
+    opacity: 0.4;
+    color: var(--tt-second-color);
+    cursor: pointer;
+    transition: 2s ease-in-out;
+}
+
+.home-slide-nav .homeslide-dot.active {
+    opacity: 1;
 }
 
 #homeSliderNext {

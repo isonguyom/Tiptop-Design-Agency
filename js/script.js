@@ -52,188 +52,68 @@ hamburger.addEventListener('click', () => {
 
 
 
-//homeslider animation
-let homeTextAnimation = function (slide) {
-  gsap.set('.title', {
-    autoAlpha: 0
-  });
-  gsap.to('.title', 3, {
-    ease: Power4.easeOut,
-    startAt: {
-      autoAlpha: 0,
-      y: "-150%",
-      opacity: 0
-    },
+// HOMEPAGE ONBOARDING MESSAGES SLIDESHOW
+let homeSlideIndex = 1;
+let homeSlideTimer;
 
-    autoAlpha: 1,
-    y: "2%",
-    display: "block",
-    opacity: 1
-  });
-  gsap.to('.subtitle', 3, {
-    ease: Power4.easeOut,
-    startAt: {
-      autoAlpha: 0,
-      x: "-150%"
-    },
+window.addEventListener("load", function () {
+  displayHomeSlides(homeSlideIndex);
+  // Autoplay
+  homeSlideTimer = setInterval(function () {
+    addHomeSlides(1)
+  }, 4500);
+})
 
-    autoAlpha: 1,
-    x: 0,
-    display: "block"
-  });
-  gsap.to('.btn', 3, {
-    ease: Power4.easeOut,
-    startAt: {
-      autoAlpha: 0,
-      rotate: 0,
-      opacity: 0,
-      y: "300%"
-    },
-
-    autoAlpha: 1,
-    rotate: 360,
-    opacity: 1,
-    y: "2%",
-    display: "block"
-  });
-  gsap.to('.home-slide-img', 3, {
-    ease: Power4.easeOut,
-    startAt: {
-      autoAlpha: 0,
-      // x: "150%",
-      scale: 0
-    },
-
-    autoAlpha: 1,
-    // x: 0,
-    scale: 1,
-    display: "block"
-  });
-}
-
-//Blog Slider animations
-let blogSliderAnimation = function (slide) {
-  gsap.set('h2', {
-    autoAlpha: 0
-  });
-  gsap.to('h2', 3, {
-    ease: Power4.easeOut,
-    startAt: {
-      autoAlpha: 0,
-      scale: 0,
-      opacity: 0
-    },
-
-    autoAlpha: 1,
-    scale: 1,
-    display: "block",
-    opacity: 1
-  });
-}
-
-//Landing pages animations
-gsap.from(".land-text", {
-  duration: 1,
-  opacity: 0,
-  scale: 0
-});
-gsap.from(".breadcrumb", {
-  duration: 1,
-  delay: 0.3,
-  x: -100,
-  opacity: 0,
-});
-
-
-// gsap.registerPlugin(ScrollTrigger);
-// document.querySelectorAll('section').forEach(line => {
-//   let inside = line.querySelector('.animate');
-//   // let title = line.querySelector('.section-title')
-
-//   ScrollTrigger.create({
-//     trigger: line,
-//     start: 'top top',
-//     duration: 1,
-//     // scrub: true,
-//     // markers:true,
-//     animation: gsap.from(inside, {
-//       // paused: true,
-//       opacity: 0,
-//       y: +100,
-//       ease: 'power',
-//       stagger: 0.2
-//     })
-//   })
-// })
-
-
-// //Homepage service section pinning
-// gsap.to(".services-inner", {
-//   y: (i, target) => -2000 * target.dataset.speed,
-//   ease: "none",
-//   scrollTrigger: {
-//     trigger: ".services-section",
-//     pin: ".services-section",
-//     end: "+=500%",
-//     scrub: true,
-//   }
-// });
-
-
-
-//Swiper
-//Home page landing 
-let homeSlider = new Swiper('.home-slider', {
-  speed: 600,
-  loop: true,
-  autoplay: {
-    delay: 6000,
-  },
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  runCallbacksOnInit: true,
-  on: {
-    init: function () {
-      let homeSlide = document.querySelectorAll('.home-slide');
-      homeTextAnimation(homeSlide);
-    },
-    slideNextTransitionStart: function () {
-      let homeSlide = document.querySelectorAll('.home-slide');
-      homeTextAnimation(homeSlide);
-    },
-    slidePrevTransitionStart: function () {
-      let homeSlide = document.querySelectorAll('.home-slide');
-      homeTextAnimation(homeSlide);
-    }
+// NEXT AND PREVIOUS CONTROL
+let addHomeSlides = function(n) {
+  clearInterval(homeSlideTimer);
+  if (n < 0) {
+    displayHomeSlides(homeSlideIndex -= 1);
+  } else {
+    displayHomeSlides(homeSlideIndex += 1);
   }
-});
+
+  if (n === -1) {
+    homeSlideTimer = setInterval(function () {
+      addHomeSlides(n + 2)
+    }, 4000);
+  } else {
+    homeSlideTimer = setInterval(function () {
+      addHomeSlides(n + 1)
+    }, 4000);
+  }
+}
+
+//Controls the current slide and resets interval if needed
+let currentHomeSlide = function(n) {
+  clearInterval(homeSlideTimer);
+  homeSlideTimer = setInterval(function () {
+    addHomeSlides(n + 1)
+  }, 4000);
+  displayHomeSlides(homeSlideIndex = n);
+}
+
+let displayHomeSlides = function(n) {
+  var i;
+  var slides = document.getElementsByClassName("tt-homepage-slide");
+  var dots = document.getElementsByClassName("homeslide-dot");
+  if (n > slides.length) {
+    homeSlideIndex = 1
+  }
+  if (n < 1) {
+    homeSlideIndex = slides.length
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.opacity = "0";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[homeSlideIndex - 1].style.opacity = "1";
+  dots[homeSlideIndex - 1].className += " active";
+}
 
 
-
-//blog post section carousel
-let postCarousel = new Swiper('.post-carousel', {
-  effect: 'coverflow',
-  centeredSlides: true,
-  slidesPerView: 'auto',
-  loop: true,
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
 
 //Client carousel
 let clientsCarousel = new Swiper('.clients-carousel', {
@@ -259,88 +139,3 @@ let clientsCarousel = new Swiper('.clients-carousel', {
   }
 });
 
-//Blog page slider
-let blogSliderNav = new Swiper('.blog-slider-nav', {
-  spaceBetween: 10,
-  slidesPerView: 7,
-  freeMode: true,
-  direction: 'vertical',
-  loopedSlides: 7, //looped slides should be the same
-  watchSlidesVisibility: true,
-  watchSlidesProgress: true,
-});
-let blogSlider = new Swiper('.blog-slider', {
-  spaceBetween: 0,
-  loop: true,
-  speed: 1000,
-  autoplay: {
-    delay: 4000,
-  },
-  loopedSlides: 7, //looped slides should be the same
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  },
-  thumbs: {
-    swiper: blogSliderNav,
-  },
-  runCallbacksOnInit: true,
-  on: {
-    init: function () {
-      let homeSlide = document.querySelectorAll('.swiper-slide');
-      blogSliderAnimation(homeSlide);
-    },
-    slideNextTransitionStart: function () {
-      let homeSlide = document.querySelectorAll('.swiper-slide');
-      blogSliderAnimation(homeSlide);
-    },
-    slidePrevTransitionStart: function () {
-      let homeSlide = document.querySelectorAll('.swiper-slide');
-      blogSliderAnimation(homeSlide);
-    }
-  }
-});
-
-
-// // Demo by http://creative-punch.net
-
-// var items = document.querySelectorAll('.circle a');
-
-// for(var i = 0, l = items.length; i < l; i++) {
-//   items[i].style.left = (50 - 35*Math.cos(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
-  
-//   items[i].style.top = (50 + 35*Math.sin(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
-// }
-
-// document.querySelector('.menu-button').onclick = function(e) {
-//    e.preventDefault(); document.querySelector('.circle').classList.toggle('open');
-// }
-
-
-let homepageSlider = function() {
-  let nextBtn = document.querySelector("#homeSliderNext"),
-  slide = document.querySelectorAll(".tt-homepage-slide"),
-      i = 0;
-
-  nextBtn.onclick = (event) => {
-      event.preventDefault();
-
-      slide[i].classList.remove("active");
-      i++;
-
-      if (i >= slide.length) {
-          i = 0;
-      }
-
-      slide[i].classList.add("active");
-  };
-
-  slider_callback();
-  let sliderInterval = window.setInterval(slider_callback, 4000);
-
-  function slider_callback() {
-      nextBtn.click();
-  }
-}
-
-homepageSlider();
