@@ -7,7 +7,7 @@
 }
 
 *:focus {
-outline: 1px solid #252525;
+    outline: 1px solid #252525;
 }
 
 :root {
@@ -469,6 +469,62 @@ button.tt-hamburger-wrapper {
     box-shadow: -2px -1px rgba(0, 0, 0, 0.158);
 }
 
+.tt-clients-carousel-container {
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.tt-clients-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    animation: scroll 30s linear infinite;
+}
+
+.tt-client {
+    flex: 1 0 20%;
+    padding: 0 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tt-client img {
+    height: 45px;
+}
+
+.controls {
+    padding: 1em;
+    text-align: center;
+}
+
+.controls button {
+    background: #aaa;
+    border: 0;
+    border-radius: 0.25em;
+    color: #eee;
+    padding: 0.5em 1em;
+}
+
+.controls button:hover,
+.controls button:focus {
+    background: orange;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 /* ======================== FOOTER ================ */
 footer {
     background: var(--tt-main-color);
@@ -894,6 +950,7 @@ footer .tt-heading {
     border-radius: 5px;
     box-shadow: var(--tt-box-shadow);
 }
+
 .tt-contact-form {
     display: flex;
     flex-wrap: wrap;
@@ -901,7 +958,8 @@ footer .tt-heading {
     position: relative;
 }
 
-.tt-contact-form input:not([type="submit"]), .tt-contact-form textarea {
+.tt-contact-form input:not([type="submit"]),
+.tt-contact-form textarea {
     color: var(--tt-font-color);
     padding: 1em;
     width: 100%;
@@ -932,7 +990,7 @@ footer .tt-heading {
 
 .submit-wrapper {
     width: 100%;
-   text-align: right;
+    text-align: right;
 }
 
 
@@ -1030,6 +1088,7 @@ footer .tt-heading {
     .tt-blog-inner {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .tt-blog-post {
@@ -1038,6 +1097,10 @@ footer .tt-heading {
 
     .tt-blog-post:nth-of-type(odd) {
         margin-right: 2em;
+    }
+
+    .tt-client {
+        flex-basis: 20%;
     }
 
     .tt-footers-wrapper {
@@ -1069,13 +1132,13 @@ footer .tt-heading {
         width: 48%;
     }
 
-       /* ===================== WORKS PAGE ======================================= */
-       .tt-works-wrapper {
-       padding-top: 3em;
-       padding-bottom: 3em;
+    /* ===================== WORKS PAGE ======================================= */
+    .tt-works-wrapper {
+        padding-top: 3em;
+        padding-bottom: 3em;
     }
 
-       .tt-work {
+    .tt-work {
         margin-bottom: 3em;
         display: flex;
     }
@@ -1083,11 +1146,11 @@ footer .tt-heading {
     .tt-work-img {
         width: 100%;
     }
-    
+
     .tt-work-img img {
         width: 100%;
     }
-    
+
     .tt-work-des {
         padding: 0 5%;
     }
@@ -1164,6 +1227,10 @@ footer .tt-heading {
         justify-content: end;
     }
 
+   .tt-client {
+        flex-basis: 20%;
+    }
+
     footer {
         padding-top: 2em;
         padding-bottom: 2em;
@@ -1218,13 +1285,13 @@ footer .tt-heading {
 
     /* ============================= CONTACT PAGE ==================== */
     .tt-contact-form input:not([type="submit"]) {
-       width: 48%;
+        width: 48%;
     }
 
     #company {
         width: 100%;
     }
-    
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -1274,6 +1341,11 @@ footer .tt-heading {
     .tt-project {
         width: 33%;
     }
+
+   .tt-client {
+        flex-basis: 16.66667%;
+    }
+
 
     /* ==================== ABOUT US PAGE ==================== */
     .ab-statement {

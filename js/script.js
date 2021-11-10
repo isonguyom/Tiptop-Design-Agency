@@ -1,4 +1,4 @@
-//Global variables declarations
+// Global variables declarations
 let hamburger = document.getElementById('hamburger');
 let menubar = document.getElementById('mainMenu');
 
@@ -55,7 +55,7 @@ hamburger.addEventListener('click', () => {
 // HOMEPAGE ONBOARDING MESSAGES SLIDESHOW
 let homeSlideIndex = 1;
 let homeSlideTimer;
-
+let clientCarouselTimer
 window.addEventListener("load", function () {
   displayHomeSlides(homeSlideIndex);
   // Autoplay
@@ -64,8 +64,8 @@ window.addEventListener("load", function () {
   }, 4500);
 })
 
-// NEXT AND PREVIOUS CONTROL
-let addHomeSlides = function(n) {
+// next and previous control
+let addHomeSlides = function (n) {
   clearInterval(homeSlideTimer);
   if (n < 0) {
     displayHomeSlides(homeSlideIndex -= 1);
@@ -85,7 +85,7 @@ let addHomeSlides = function(n) {
 }
 
 //Controls the current slide and resets interval if needed
-let currentHomeSlide = function(n) {
+let currentHomeSlide = function (n) {
   clearInterval(homeSlideTimer);
   homeSlideTimer = setInterval(function () {
     addHomeSlides(n + 1)
@@ -93,7 +93,7 @@ let currentHomeSlide = function(n) {
   displayHomeSlides(homeSlideIndex = n);
 }
 
-let displayHomeSlides = function(n) {
+let displayHomeSlides = function (n) {
   var i;
   var slides = document.getElementsByClassName("tt-homepage-slide");
   var dots = document.getElementsByClassName("homeslide-dot");
@@ -115,27 +115,50 @@ let displayHomeSlides = function(n) {
 
 
 
-//Client carousel
-let clientsCarousel = new Swiper('.clients-carousel', {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  freeMode: true,
-  loop: true,
-  autoplay: true,
-  grabCursor: true,
-  breakpoints: {
-    500: {
-      slidesPerView: 2,
-      spaceBetween: 15,
-    },
-    768: {
-      slidesPerView: 4,
-      spaceBetween: 40,
-    },
-    1024: {
-      slidesPerView: 6,
-      spaceBetween: 50,
-    },
-  }
+//CLIENT CAROUSEL
+let clientsCarousel = document.querySelector('.tt-clients-carousel-container');
+let clientsCarouselInner = document.querySelector('.tt-clients-inner');
+
+let pressed = false;
+let startX;
+let x;
+
+clientsCarousel.addEventListener('mousedown', (e) => {
+  pressed = true;
+  startX = e.offsetX - clientsCarouselInner.offsetLeft
+  clientsCarousel.style.cursor = 'grabbing';
+  console.log(clientsCarouselInner.offsetleft)
 });
 
+clientsCarousel.addEventListener('mouseenter', () => {
+  clientsCarousel.style.cursor = 'grab';
+});
+
+clientsCarousel.addEventListener('mouseup', () => {
+  clientsCarousel.style.cursor = 'grab';
+});
+
+window.addEventListener('mouseup', () => {
+  pressed = false;
+});
+
+clientsCarousel.addEventListener('mousemove', (e) => {
+  if (!pressed) return;
+  e.preventDefault();
+
+  x = e.offsetX;
+  clientsCarouselInner.style.left = `${x - startX}px`;
+
+  checkBoundry();
+});
+
+function checkBoundry() {
+  let outer = clientsCarousel.getBoundingClientRect();
+  let inner = clientsCarouselInner.getBoundingClientRect();
+
+  if (parseInt(clientsCarouselInner.style.left) > 0) {
+    clientsCarouselInner.style.left = "0px";
+  } else if (inner.right < outer.right) {
+    clientsCarouselInner.style.left = `-${inner.width - outer.width}px`;
+  }
+}
