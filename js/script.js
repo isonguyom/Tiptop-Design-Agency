@@ -94,9 +94,9 @@ let currentHomeSlide = function (n) {
 }
 
 let displayHomeSlides = function (n) {
-  var i;
-  var slides = document.getElementsByClassName("tt-homepage-slide");
-  var dots = document.getElementsByClassName("homeslide-dot");
+  let i;
+  let slides = document.getElementsByClassName("tt-homepage-slide");
+  let dots = document.getElementsByClassName("homeslide-dot");
   if (n > slides.length) {
     homeSlideIndex = 1
   }
@@ -115,6 +115,54 @@ let displayHomeSlides = function (n) {
 
 
 
+// PIN SERVICES SECTION ON HOMEPAGE ON SCROLL TO VIEWPORT
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+const navLinks = gsap.utils.toArray(".services-nav-cover a");
+
+let serviceItem = gsap.utils.toArray(".services-nav-cover a");
+
+navLinks.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: { y: "#info" + (index + 1), offsetY: 0 }
+    });
+  });
+});
+
+ScrollTrigger.create({
+  trigger: ".tt-services-wrapper",
+ pin: ".services-nav-inner",
+  start: "top top-=0",
+  endTrigger: ".services-icon-wrapper",
+  end: "bottom 0",
+  pinSpacing: false,
+  scrub: 1,
+  toggleClass: { className: "fixed", targets: "#info" }
+});
+
+const serviceIcon = gsap.utils.toArray(".tt-services-icon");
+
+serviceIcon.forEach((panel, i) => {
+  ScrollTrigger.create({
+    trigger: panel,
+    start: "top 50%",
+
+    onEnter: () => {
+      gsap.set(".services-nav-cover a", { color: "var(--tt-second-color)", fontWeight: "bold", opacity: "0.5" });
+      gsap.set(serviceItem[i], { opacity: "1" });
+    },
+    onEnterBack: () => {
+      gsap.set(".services-nav-cover a", { color: "var(--tt-second-color)", fontWeight: "bold", opacity: "0.5"  });
+      gsap.set(serviceItem[i], { opacity: "1" });
+    }
+  });
+});
+
+
+
+
 //CLIENT CAROUSEL
 let clientsCarousel = document.querySelector('.tt-clients-carousel-container');
 let clientsCarouselInner = document.querySelector('.tt-clients-inner');
@@ -125,7 +173,7 @@ let x;
 
 clientsCarousel.addEventListener('mousedown', (e) => {
   pressed = true;
-  startX = e.offsetX - clientsCarouselInner.offsetLeft
+  startX = e.clientX;
   clientsCarousel.style.cursor = 'grabbing';
   console.log(clientsCarouselInner.offsetleft)
 });
@@ -146,19 +194,7 @@ clientsCarousel.addEventListener('mousemove', (e) => {
   if (!pressed) return;
   e.preventDefault();
 
-  x = e.offsetX;
+  x = e.clientX;
   clientsCarouselInner.style.left = `${x - startX}px`;
-
-  checkBoundry();
 });
 
-function checkBoundry() {
-  let outer = clientsCarousel.getBoundingClientRect();
-  let inner = clientsCarouselInner.getBoundingClientRect();
-
-  if (parseInt(clientsCarouselInner.style.left) > 0) {
-    clientsCarouselInner.style.left = "0px";
-  } else if (inner.right < outer.right) {
-    clientsCarouselInner.style.left = `-${inner.width - outer.width}px`;
-  }
-}

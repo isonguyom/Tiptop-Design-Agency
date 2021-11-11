@@ -326,6 +326,20 @@ button.tt-hamburger-wrapper {
     color: var(--tt-font-color);
 }
 
+.services-nav-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+/* .services-nav-inner {
+    position: absolute;
+}
+
+.fixed {
+    position: relative;
+} */
+
 .tt-services-nav {
     list-style: none;
 }
@@ -343,12 +357,20 @@ button.tt-hamburger-wrapper {
 }
 
 .tt-services-nav .list-item:hover a {
-    text-decoration: none;
-    color: #E1C6B1;
+    opacity: 0.9;
 }
 
-.tt-services-icons {
-    display: none;
+.tt-services-icon {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tt-services-icon img {
+    width: 70%;
 }
 
 /* ===========================TIPTOP SAMPLE PROJECTS SECTION ON HOMEPAGE ================= */
@@ -520,6 +542,7 @@ button.tt-hamburger-wrapper {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-100%);
     }
@@ -1040,45 +1063,9 @@ footer .tt-heading {
         padding: 2em;
     }
 
-    .tt-services-wrapper {
-        min-height: 100vh;
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-    }
-
     .tt-services-inner {
         display: flex;
         justify-content: space-between;
-        /* align-items: center; */
-    }
-
-    .tt-services-nav .list-item a {
-        opacity: 0.7;
-    }
-
-    .tt-services-nav .list-item a.active {
-        opacity: 1;
-    }
-
-    .tt-services-nav .list-item:hover a {
-        opacity: 0.9;
-    }
-
-    .tt-services-icons {
-        display: block;
-        width: 50%;
-        position: relative;
-        /* border: 1px solid yellow; */
-    }
-
-    .tt-services-icon {
-        position: absolute;
-        opacity: 0;
-    }
-
-    .tt-services-icon.active {
-        opacity: 1;
     }
 
     .tt-project {
@@ -1196,10 +1183,6 @@ footer .tt-heading {
         font-size: 1.4rem;
     }
 
-    .tt-services-icon {
-        top: -3em;
-    }
-
     .tt-portfolio-wrapper {
         padding-top: 3em;
         padding-bottom: 3em;
@@ -1227,7 +1210,7 @@ footer .tt-heading {
         justify-content: end;
     }
 
-   .tt-client {
+    .tt-client {
         flex-basis: 20%;
     }
 
@@ -1330,19 +1313,16 @@ footer .tt-heading {
         color: var(--tt-font-color);
     }
 
+    
     .tt-services-nav .list-item {
         font-size: 1.8rem;
-    }
-
-    .tt-services-icon img {
-        max-height: 500px;
     }
 
     .tt-project {
         width: 33%;
     }
 
-   .tt-client {
+    .tt-client {
         flex-basis: 16.66667%;
     }
 

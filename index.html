@@ -18,6 +18,7 @@
         integrity="sha512-n6GpoPKzdir52uRa3Z+M+BxBFNGwMMVTISZM9LMg9lMXyRVrtCcQavkP81NOI06NyVUskN9GLzZIQtPuF3GWLg=="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -112,6 +113,45 @@
         <section class="tt-services-wrapper wrapper">
             <p class="tt-heading">Our Services</p>
             <div class="tt-services-inner">
+                <div class="services-nav-wrapper">
+                    <div class="services-nav-inner" id="info">
+                        <nav class="services-nav-cover" aria-label="info navigation">
+                            <ul class="tt-services-nav">
+                                <li id="menu_sImg1" class="list-item">
+                                    <a href="#sImg1" class="service active">Graphic Design</a>
+                                </li>
+                                <li id="menu_sImg2" class="list-item">
+                                    <a href="#sImg2" class="service">Mobile App Design</a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#sImg3" class="service">Web Design</a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#sImg4" class="service">Brand Identity</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="services-icon-wrapper">
+                    <div id="sImg1" class="tt-services-icon active">
+                        <img src="./images/7898563_pencil_ruller_icon.png" alt="">
+                    </div>
+                    <div id="sImg2" class="tt-services-icon">
+                        <img src="./images/Mobile_app_perspective_matte.png" alt="">
+                    </div>
+                    <div id="sImg3" class="tt-services-icon">
+                        <img src="./images/Dashboard_perspective_matte.png" alt="">
+                    </div>
+                    <div id="sImg4" class="tt-services-icon">
+                        <img src="./images/Marketing_perspective_matte.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="tt-services-wrapper wrapper">
+            <p class="tt-heading">Our Services</p>
+            <div class="tt-services-inner">
                 <ul class="tt-services-nav">
                     <li id="menu_sImg1" class="list-item">
                         <a href="#sImg1" class="service active">Graphic Design</a>
@@ -141,7 +181,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <section class="tt-portfolio-wrapper wrapper">
             <div class="tt-heading-wrapper">
                 <p class="tt-heading">Featured Projects</p>
@@ -224,8 +264,8 @@
                     </div>
                 </div>
         </section>
-    
-       
+
+
 
         <section class="tt-client-wrapper wrapper">
             <div class="tt-clients-carousel-container">
