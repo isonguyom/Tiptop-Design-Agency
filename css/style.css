@@ -370,7 +370,7 @@ button.tt-hamburger-wrapper {
 }
 
 .tt-services-icon img {
-    width: 70%;
+    width: 50%;
 }
 
 /* ===========================TIPTOP SAMPLE PROJECTS SECTION ON HOMEPAGE ================= */
@@ -756,7 +756,7 @@ footer .tt-heading {
     width: 100%;
     height: 100%;
     position: relative;
-    transition: transform 0.3s;
+    transition: transform 1s;
     transform-style: preserve-3d;
 }
 
@@ -814,6 +814,7 @@ footer .tt-heading {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    padding-top: 5em;
 }
 
 .tt-services-flex {
@@ -825,20 +826,37 @@ footer .tt-heading {
 .tt-service {
     width: 100%;
     border: 2px solid gray;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
     padding: 2em 0.5em;
     box-shadow: var(--box-shadow);
     vertical-align: middle;
-    color: var(--tt-second-color);
     text-align: center;
+    border-radius: 5px;
+    position: relative;
 }
 
 .tt-service-img {
     margin-bottom: 1em;
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    top: -3em;
+}
+
+.overlay {
+    width: 100%;
+    height: 40px;
+}
+
+.tt-service-img img {
+    height: 120px;
+    filter: drop-shadow(12px 12px 4px rgb(61, 61, 61));
+    background: transparent;
+    padding: 0.5em;
 }
 
 .tt-service-des h3 {
-    color: var(--tt-main-color);
+    color: #f9f9f9;
     font-family: var(--tt-title-font);
     font-weight: 700;
 }
@@ -846,28 +864,78 @@ footer .tt-heading {
 .tt-service-des p {
     margin-top: 0.3em;
     line-height: 1.5em;
-}
-
-.tools .sections-title {
-    color: var(--ter-color);
+    color: #b9b8b8;
 }
 
 
-.tt-tools-inner {
-    margin: 1em auto;
-    line-height: 3em;
+.tt-tools-wrapper .tt-heading-wrapper {
+    text-align: center;
+    margin-bottom: 60px;
 }
 
-.tt-tools-inner ul {
-    list-style: none;
+.tt-tools-wrapper .tt-heading-wrapper .tt-heading {
+    margin-bottom: 20px;
 }
 
-.tt-tools-inner ul li h1 {
+.tt-tools-wrapper .tt-heading-wrapper p {
+    color: var(--tt-font-color);
+    opacity: 0.8;
+}
+
+
+.tt-tool {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px rgba(61, 61, 61, 0.575);
+    padding: 25px;
+    margin: 20px;
+    height: 180px;
+    transition: transform 1s;
+}
+
+.tt-tool:hover {
+    transform: scale(1.1);
+}
+
+.tt-tool img {
+    float: right;
+    height: 50px;
+    filter: drop-shadow(5px 5px 8px rgba(61, 61, 61, 0.747));
+    position: relative;
+    top: 40%;
+}
+
+.tt-tool h3 {
     text-transform: uppercase;
-    font-family: var(--title-font);
-    font-weight: bolder;
-    color: var(--text-color);
+    color: var(--tt-main-color);
+    font-family: var(--tt-title-font);
+    font-size: 1rem;
 }
+
+
+.adobe-illustrator {
+    border-top: 3px solid #FF9A00;
+}
+
+.figma {
+    border-top: 3px solid #F24E1A;
+}
+
+.sketch {
+    border-top: 3px solid #FDAF00;
+}
+
+.adobe-photoshop {
+    border-top: 3px solid #31A8FF;
+}
+
+.corel-draw {
+    border-top: 3px solid #61A901;
+}
+
+.canva {
+    border-top: 3px solid #00C4CC;
+}
+
 
 /* ========================= WORK PAGE =============================== */
 .tt-work {
@@ -953,6 +1021,12 @@ footer .tt-heading {
     transition: 0.7s;
 }
 
+.tt-article-overlay img {
+    opacity: 0.5;
+    filter: drop-shadow(inset 5px 5px 8px rgba(61, 61, 61, 0.747));
+    inset: 20px 40px 30px 10px;
+}
+
 .tt-article-img:hover .tt-article-overlay {
     display: flex;
 }
@@ -981,6 +1055,24 @@ footer .tt-heading {
     position: relative;
 }
 
+.tt-contact-form .tt-form-group {
+    position: relative;
+    width: 100%;
+}
+
+.tt-contact-form .tt-form-group label {
+    position: absolute;
+    top: 1px;
+    left: 1em;
+    background: #E6EBEB;
+    padding: 0 5px;
+    z-index: 1;
+    font-size: 0.7rem;
+    font-family: var(--tt-main-font);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
 .tt-contact-form input:not([type="submit"]),
 .tt-contact-form textarea {
     color: var(--tt-font-color);
@@ -988,28 +1080,32 @@ footer .tt-heading {
     width: 100%;
     margin: 0.6em 0;
     border: none;
+    border-radius: 5px;
     border-bottom: 2px solid #4d63612c;
     background: transparent;
 }
 
-.tt-contact-form textarea {
+#textareaWrapper {
     margin: 1em 0;
+    width: 100%;
+}
+
+.tt-contact-form textarea {
     border: 2px solid #4d63612c;
 }
 
-.tt-contact-form input:not([type="submit"]):focus {
+.tt-contact-form input:not([type="submit"]):hover {
     border-bottom: 2px solid var(--tt-main-color);
 }
 
-.tt-contact-form textarea:focus {
+.tt-contact-form textarea:hover {
     border: 2px solid var(--tt-main-color);
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: 1px solid var(--secondary-color);
-    border: none;
-}
+/* .tt-contact-form input:not([type="submit"]):focus {
+    border: 2px solid #4d63612c;
+} */
+
 
 .submit-wrapper {
     width: 100%;
@@ -1031,23 +1127,6 @@ footer .tt-heading {
     width: 100%;
 }
 
-
-/* .tools-menu {
-    display: none;
-}
-
-.tools-row {
-    margin: 20px;
-    text-align: center;
-}
-
-.tools-icon {
-    margin: 0 20px;
-}
-
-.tool-invisible {
-    visibility: hidden;
-} */
 
 @media screen and (min-width: 576px) {
     .tt-main-menu-wrapper {
@@ -1117,6 +1196,18 @@ footer .tt-heading {
     /* =================== SERVICES PAGE =========================== */
     .tt-service {
         width: 48%;
+    }
+
+    .tt-tools-row1,
+    .tt-tools-row2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tt-tools-wrapper .tt-heading-wrapper p {
+        width: 70%;
+        margin: auto;
     }
 
     /* ===================== WORKS PAGE ======================================= */
@@ -1267,11 +1358,11 @@ footer .tt-heading {
     }
 
     /* ============================= CONTACT PAGE ==================== */
-    .tt-contact-form input:not([type="submit"]) {
+    .tt-contact-form .tt-form-group {
         width: 48%;
     }
 
-    #company {
+    #companyWrapper {
         width: 100%;
     }
 
@@ -1313,7 +1404,7 @@ footer .tt-heading {
         color: var(--tt-font-color);
     }
 
-    
+
     .tt-services-nav .list-item {
         font-size: 1.8rem;
     }
@@ -1349,6 +1440,23 @@ footer .tt-heading {
     /* ========================== SERVICES PAGE =========================== */
     .tt-service {
         width: 22%;
+    }
+
+    .tt-tools-wrapper {
+        padding-bottom: 10em;
+    }
+
+    .tt-tool-down {
+        position: relative;
+        top: 150px;
+    }
+
+    .tt-tool {
+        width: 20%;
+    }
+
+    .tt-tools-wrapper .tt-heading-wrapper p {
+        width: 40%;
     }
 
     /* ====================== CONTACT PAGE ==================================== */

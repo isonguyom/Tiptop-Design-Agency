@@ -197,4 +197,3 @@ clientsCarousel.addEventListener('mousemove', (e) => {
   x = e.clientX;
   clientsCarouselInner.style.left = `${x - startX}px`;
 });
-
