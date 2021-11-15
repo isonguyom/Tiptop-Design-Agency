@@ -332,14 +332,6 @@ button.tt-hamburger-wrapper {
     width: 100%;
 }
 
-/* .services-nav-inner {
-    position: absolute;
-}
-
-.fixed {
-    position: relative;
-} */
-
 .tt-services-nav {
     list-style: none;
 }
@@ -960,7 +952,8 @@ footer .tt-heading {
     height: 100%;
     background: #18171794;
     top: 0;
-    cursor: all-scroll;
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
+    ;
 }
 
 .tt-work-des .tt-work-title {
@@ -1070,7 +1063,7 @@ footer .tt-heading {
     font-size: 0.7rem;
     font-family: var(--tt-main-font);
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 1s;
 }
 
 .tt-contact-form input:not([type="submit"]),
@@ -1102,10 +1095,11 @@ footer .tt-heading {
     border: 2px solid var(--tt-main-color);
 }
 
-/* .tt-contact-form input:not([type="submit"]):focus {
-    border: 2px solid #4d63612c;
-} */
-
+.tt-contact-form input:not([type="submit"]).hide-placeholder::placeholder,
+.tt-contact-form textarea.hide-placeholder::placeholder {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
 
 .submit-wrapper {
     width: 100%;

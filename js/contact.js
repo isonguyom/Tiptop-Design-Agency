@@ -1,15 +1,19 @@
-// TOGGLING CONTACT FORM LABEL
+// TOGGLING CONTACT FORM LABEL VISIBILITY
 
-let contactInput = document.getElementById('fName');
-let placeholderText = contactInput.placeholder.value
-contactInput.addEventListener('focus', () => {
-  let contactLabel = document.getElementById('fnameLabel');
+// reveal label
+let revealLabel = function(input, label) {
+  let contactLabel = document.getElementById(label);
+  let contactInput = document.getElementById(input);
 
-  contactInput.placeholder = ""
+  contactInput.classList.add('hide-placeholder');
   contactLabel.style.opacity = '1'
-})
-contactInput.addEventListener('focusout', (e) => {
-  let contactLabel = document.getElementById('fnameLabel');
-  contactInput.placeholder = placeholderText;
+}
+
+// hide label
+let hideLabel = function(input, label) {
+  let contactLabel = document.getElementById(label);
+  let contactInput = document.getElementById(input);
+
+  contactInput.classList.remove('hide-placeholder');
   contactLabel.style.opacity = '0'
-})
+}
