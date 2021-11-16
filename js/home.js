@@ -82,7 +82,7 @@ ScrollTrigger.create({
  pin: ".services-nav-inner",
   start: "top top-=0",
   endTrigger: ".services-icon-wrapper",
-  end: "bottom 0",
+  end: "bottom bottom",
   pinSpacing: false,
   scrub: 1,
   toggleClass: { className: "fixed", targets: "#info" }
@@ -93,7 +93,11 @@ const serviceIcon = gsap.utils.toArray(".tt-services-icon");
 serviceIcon.forEach((panel, i) => {
   ScrollTrigger.create({
     trigger: panel,
-    start: "top 50%",
+    start: "top top", 
+    endTrigger: ".services-icon-wrapper",
+    end: "bottom bottom",
+    pin: true, 
+    pinSpacing: false, 
 
     onEnter: () => {
       gsap.set(".services-nav-cover a", { color: "var(--tt-second-color)", fontWeight: "bold", opacity: "0.5" });

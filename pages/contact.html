@@ -59,7 +59,7 @@
     </header>
     <main>
         <section class="tt-contact-form-wrapper wrapper">
-            <div class="tt-contact-form-inner">
+            <div class="tt-contact-form-inner opacity-animate">
                 <form action="" method="get" id="contactForm" class="tt-contact-form">
                     <div class="tt-form-group">
                         <label for="fName" id="fnameLabel">First Name</label>
@@ -84,19 +84,21 @@
                     <div class="tt-form-group" id="companyWrapper">
                         <label for="company" id="companyLabel">Company</label>
                         <input type="text" name="company" placeholder="Company" id="company" class="company"
-                            onfocus="revealLabel('company', 'companyLabel')" onfocusout="hideLabel('company', 'companyLabel')">
+                            onfocus="revealLabel('company', 'companyLabel')"
+                            onfocusout="hideLabel('company', 'companyLabel')">
                     </div>
                     <div class="tt-form-group" id="textareaWrapper">
                         <label for="message" id="messageLabel">Type your message</label>
                         <textarea name="message" id="message" cols="30" rows="8" placeholder="What's on your mind?"
-                            onfocus="revealLabel('message', 'messageLabel')" onfocusout="hideLabel('message', 'messageLabel')"></textarea>
+                            onfocus="revealLabel('message', 'messageLabel')"
+                            onfocusout="hideLabel('message', 'messageLabel')"></textarea>
                     </div>
                     <div class="submit-wrapper">
                         <input class="tt-btn" type="submit" value="Submit">
                     </div>
                 </form>
             </div>
-            <div class="map" id="googlemaps">
+            <div class="map" id="googlemaps opacity-animate">
                 <div class="gmap-canvas">
                     <iframe width="100%" height="500" id="gmapCanvas"
                         src="https://maps.google.com/maps?q=lekki,%20Lagos&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -108,7 +110,7 @@
     </main>
     <footer>
         <section class="tt-footers-wrapper wrapper">
-            <div class="office-add">
+            <div class="office-add opacity-animate">
                 <p class="tt-heading">Our Head Office</p>
                 <address>
                     102 Madison Avenue - Second Floor
@@ -116,22 +118,22 @@
                     <p>T: (646) 480.6328</p>
                 </address>
             </div>
-            <div class="social-nav">
+            <div class="social-nav opacity-animate">
                 <p class="tt-heading">Connect on social media</p>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-facebook-square"></i></a>
-                <a href="#"><i class="fab fa-twitter-square"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube-square"></i></a>
+                <a href="#"><i class="fab fa-linkedin opacity-animate"></i></a>
+                <a href="#"><i class="fab fa-facebook-square opacity-animate"></i></a>
+                <a href="#"><i class="fab fa-twitter-square opacity-animate"></i></a>
+                <a href="#"><i class="fab fa-instagram opacity-animate"></i></a>
+                <a href="#"><i class="fab fa-youtube-square opacity-animate"></i></a>
             </div>
-            <div class="contact">
+            <div class="contact opacity-animate">
                 <p class="tt-heading">Let's handle your project</p>
-                <a class="tt-btn" href="./pages/contact.html">Contact Us</a>
+                <a class="tt-btn" href="./contact.html">Contact Us</a>
             </div>
         </section>
-        <div class="tt-copyright wrapper">&copy; 2021 Tiptop Design Agency - All Rights Reserved</div>
+        <div class="tt-copyright wrapper opacity-animate">&copy; 2021 Tiptop Design Agency - All Rights Reserved</div>
     </footer>
-
+    <div class="cursor"></div>
 
 
 

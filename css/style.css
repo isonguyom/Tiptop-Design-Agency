@@ -41,6 +41,68 @@ a:hover {
 }
 
 /*======================== GLOBAL STYLING ===================================*/
+.cursor {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #2525258a;
+    background: #a09f5657;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    content: "";
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid #A09F56;
+}
+
 .wrapper {
     padding: 1em 3%;
     width: 100%;
@@ -146,8 +208,8 @@ button.tt-hamburger-wrapper {
 }
 
 .tt-main-menu {
-    width: 100%;
-    height: 100%;
+    width: 0;
+    height: 0;
     background: #6e8c896e;
     padding: 2em;
     border-top-right-radius: 5px;
@@ -359,6 +421,7 @@ button.tt-hamburger-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: var(--tt-main-color);
 }
 
 .tt-services-icon img {
@@ -952,8 +1015,7 @@ footer .tt-heading {
     height: 100%;
     background: #18171794;
     top: 0;
-    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
-    ;
+    /* cursor: none; */
 }
 
 .tt-work-des .tt-work-title {
@@ -1467,4 +1529,9 @@ footer .tt-heading {
     .map {
         margin-top: 0;
     }
+}
+
+.opacity-animate {
+    opacity: 0;
+    transition: opacity 0.5s;
 }
